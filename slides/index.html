@@ -1,0 +1,455 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Testing in Go</title>
+
+		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+		<meta name="author" content="Hakim El Hattab">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="css/reveal.min.css">
+		<link rel="stylesheet" href="css/theme/default_solid.css" id="theme">
+
+		<!-- For syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+		<link href='http://fonts.googleapis.com/css?family=Droid+Sans+Mono' rel='stylesheet' type='text/css'>
+
+		<!-- If the query includes 'print-pdf', include the PDF print sheet -->
+		<script>
+			if( window.location.search.match( /print-pdf/gi ) ) {
+				var link = document.createElement( 'link' );
+				link.rel = 'stylesheet';
+				link.type = 'text/css';
+				link.href = 'css/print/pdf.css';
+				document.getElementsByTagName( 'head' )[0].appendChild( link );
+			}
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+
+		<style>
+						
+			p.mycode {
+				font-size: 1.5em; 
+				font-family: 'Droid Sans Mono', monospace; 
+				font-weight: 700;
+			}
+	
+			li.mycode-small, p.mycode-small {
+				font-family: 'Droid Sans Mono', monospace; 
+				font-weight: 700;
+			}
+
+		</style>
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+
+				<section data-markdown="resources/intro.md"  
+						 data-background="#2c2922" 
+				         data-separator="^\n\n\n"  
+				         data-vertical="^\n\n"  
+				         data-notes="^Note:"  
+				         data-charset="iso-8859-15">
+				</section>
+				<section data-markdown="resources/agenda.md"  
+						 data-background="#2c2922" 
+				         data-separator="^\n\n\n"  
+				         data-vertical="^\n\n"  
+				         data-notes="^Note:"  
+				         data-charset="iso-8859-15">
+				</section>
+				<section data-markdown="resources/agenda_out_of_scope.md"  
+						 data-background="#2c2922" 
+				         data-separator="^\n\n\n"  
+				         data-vertical="^\n\n"  
+				         data-notes="^Note:"  
+				         data-charset="iso-8859-15">
+				</section>
+				<section data-markdown="resources/why_test.md"  
+						 data-background="#2c2922" 
+				         data-separator="^\n\n\n"  
+				         data-vertical="^\n\n"  
+				         data-notes="^Note:"  
+				         data-charset="iso-8859-15">
+				</section>
+				<section data-markdown="resources/diff_forms_of_testing.md"  
+						 data-background="#2c2922" 
+				         data-separator="^\n\n\n"  
+				         data-vertical="^\n\n"  
+				         data-notes="^Note:"  
+				         data-charset="iso-8859-15">
+				</section>
+				<section data-markdown="resources/where_to_start.md"  
+						 data-background="#2c2922" 
+				         data-separator="^\n\n\n"  
+				         data-vertical="^\n\n"  
+				         data-notes="^Note:"  
+				         data-charset="iso-8859-15">
+				</section>
+				<section data-markdown="resources/testing_in_go.md"  
+						 data-background="#2c2922" 
+						 data-transition="linear" 
+				         data-separator="^\n\n\n"  
+				         data-vertical="^\n\n"  
+				         data-notes="^Note:"  
+				         data-charset="iso-8859-15">
+				</section>
+
+
+				<section data-background="#727d52" 
+						 data-transition="linear" 
+						 data-background-transition="slide">
+					<section>
+						<h2>Testing in Go</h2>
+						<p>&nbsp;</p>
+						<p class="mycode fragment roll-in">$ go test</p>		
+						<p>&nbsp;</p>			
+					</section>
+					<section data-markdown="resources/example_test_1.0.md"  
+					
+					         data-separator="^\n\n\n"  
+					         data-vertical="^\n\n"  
+					         data-notes="^Note:"  
+					         data-charset="iso-8859-15">
+					</section>
+					<section data-markdown="resources/example_test_1.1.md"  
+					         data-separator="^\n\n\n"  
+					         data-vertical="^\n\n"  
+					         data-notes="^Note:"  
+					         data-charset="iso-8859-15">
+					</section>
+					<section data-markdown="resources/example_test_1.2.md"  
+					         data-separator="^\n\n\n"  
+					         data-vertical="^\n\n"  
+					         data-notes="^Note:"  
+					         data-charset="iso-8859-15">
+					</section>
+					<section data-markdown="resources/example_test_1.3.md"  
+					         data-separator="^\n\n\n"  
+					         data-vertical="^\n\n"  
+					         data-notes="^Note:"  
+					         data-charset="iso-8859-15">
+					</section>
+					<section data-markdown="resources/example_test_1.4.md"  
+					         data-separator="^\n\n\n"  
+					         data-vertical="^\n\n"  
+					         data-notes="^Note:"  
+					         data-charset="iso-8859-15">
+					</section>
+					<section data-markdown="resources/example_test_1.5.md"  
+					         data-separator="^\n\n\n"  
+					         data-vertical="^\n\n"  
+					         data-notes="^Note:"  
+					         data-charset="iso-8859-15">
+					</section>
+				</section>
+
+				<section data-background="#675b46" 
+						 data-transition="linear" 
+						 data-background-transition="slide">
+					<section>
+						<h2>Benchmarking in Go</h2>	
+						<p>&nbsp;</p>
+						<p class="mycode fragment roll-in">$ go test -bench .</p>		
+						<p>&nbsp;</p>							
+					</section>
+					<section data-markdown="resources/example_bench_1.0.md"  
+					         data-separator="^\n\n\n"  
+					         data-vertical="^\n\n"  
+					         data-notes="^Note:"  
+					         data-charset="iso-8859-15">
+					</section>
+					<section data-markdown="resources/example_bench_1.1.md"  
+					         data-separator="^\n\n\n"  
+					         data-vertical="^\n\n"  
+					         data-notes="^Note:"  
+					         data-charset="iso-8859-15">
+					</section>
+					<section data-markdown="resources/example_bench_1.2.md"  
+					         data-separator="^\n\n\n"  
+					         data-vertical="^\n\n"  
+					         data-notes="^Note:"  
+					         data-charset="iso-8859-15">
+					</section>
+					<section >
+						<h2>Benchmark Example</h2>	
+						<aside class="notes">
+							<ul>
+								<li>github.com/mkboudreau/meetup-june2014/code/lottery</li>
+								<li>go test -bench .</li>
+								<li>github.com/mkboudreau/meetup-june2014/code/algorithms</li>
+								<li>go test -bench .</li>
+							</ul>
+						</aside>
+					</section>
+				</section>
+
+				<section data-background="#727d52" 
+						 data-transition="linear" 
+						 data-background-transition="slide">
+					<section>
+						<h2>Coverage Analysis in Go</h2>
+						<h5>Simple and Intuitive</h5>
+						<p>&nbsp;</p>
+						<p class="mycode fragment roll-in">$ go test -cover</p>		
+						<p>&nbsp;</p>									
+					</section>
+					<section>
+						<h2>Coverage Analysis in Go</h2>
+						<h5>Output Viewing Options</h5>
+						<p class="mycode-small fragment roll-in">$ go test -coverprofile=cover.out</p>		
+						<p class="mycode-small fragment roll-in">$ go tool cover -func=cover.out</p>		
+						<p class="mycode-small fragment roll-in">$ go tool cover -html=cover.out</p>		
+						<p>&nbsp;</p>									
+					</section>
+					<section >
+						<h2>Coverage Example</h2>	
+						<aside class="notes">
+							<ul>
+								<li>github.com/mkboudreau/meetup-june2014/code/algorithms</li>
+								<li>go test -cover</li>
+								<li>go test -coverprofile=cover.out</li>
+								<li>go tool cover -func=cover.out</li>
+								<li>go tool cover -html=cover.out</li>
+							</ul>
+						</aside>
+					</section>
+				</section>
+
+				<section data-background="#675b46" 
+						 data-transition="linear" 
+						 data-background-transition="slide">
+					<section >
+						<h2>Race Condition Detection in Go</h2>		
+						<p>&nbsp;</p>
+						<p class="mycode fragment roll-in">$ go test -race</p>		
+						<p>&nbsp;</p>									
+					</section>			
+					<section data-markdown="resources/race_taskrunner_context_intro.md"  
+						     data-transition="none"
+						     data-background-transition="none"
+					         data-separator="^\n\n\n"  
+					         data-vertical="^\n\n"  
+					         data-notes="^Note:"  
+					         data-charset="iso-8859-15">
+					</section>			
+					<section data-markdown="resources/race_taskrunner_pic_0.md"  
+						     data-transition="none"
+						     data-background-transition="none"
+					         data-separator="^\n\n\n"  
+					         data-vertical="^\n\n"  
+					         data-notes="^Note:"  
+					         data-charset="iso-8859-15">
+					</section>				
+					<section data-markdown="resources/race_taskrunner_pic_1.md"  
+						     data-transition="none"
+						     data-background-transition="none"
+					         data-separator="^\n\n\n"  
+					         data-vertical="^\n\n"  
+					         data-notes="^Note:"  
+					         data-charset="iso-8859-15">
+					</section>
+					<section data-markdown="resources/race_taskrunner_code_basics.md"  
+						     data-transition="none"
+						     data-background-transition="none"
+					         data-separator="^\n\n\n"  
+					         data-vertical="^\n\n"  
+					         data-notes="^Note:"  
+					         data-charset="iso-8859-15">
+					</section>
+					<section data-markdown="resources/race_taskrunner_code_runtask_use.md"  
+						     data-transition="none"
+						     data-background-transition="none"
+					         data-separator="^\n\n\n"  
+					         data-vertical="^\n\n"  
+					         data-notes="^Note:"  
+					         data-charset="iso-8859-15">
+					</section>					
+					<section data-markdown="resources/race_taskrunner_pic_1.md"  
+						     data-transition="none"
+						     data-background-transition="none"
+					         data-separator="^\n\n\n"  
+					         data-vertical="^\n\n"  
+					         data-notes="^Note:"  
+					         data-charset="iso-8859-15">
+					</section>
+					<section data-markdown="resources/race_taskrunner_pic_2.md"  
+						     data-transition="none"
+						     data-background-transition="none"
+					         data-separator="^\n\n\n"  
+					         data-vertical="^\n\n"  
+					         data-notes="^Note:"  
+					         data-charset="iso-8859-15">
+					</section>
+					<section data-markdown="resources/race_taskrunner_pic_3.md"  
+						     data-transition="none"
+						     data-background-transition="none"
+					         data-separator="^\n\n\n"  
+					         data-vertical="^\n\n"  
+					         data-notes="^Note:"  
+					         data-charset="iso-8859-15">
+					</section>
+					<section data-markdown="resources/race_taskrunner_pic_4.md"  
+						     data-transition="none"
+						     data-background-transition="none"
+					         data-separator="^\n\n\n"  
+					         data-vertical="^\n\n"  
+					         data-notes="^Note:"  
+					         data-charset="iso-8859-15">
+					</section>
+					<section data-markdown="resources/race_taskrunner_code_chaintask.md"  
+						     data-transition="none"
+						     data-background-transition="none"
+					         data-separator="^\n\n\n"  
+					         data-vertical="^\n\n"  
+					         data-notes="^Note:"  
+					         data-charset="iso-8859-15">
+					</section>
+
+					<section >
+						<h2>Race Detection Example</h2>	
+						<aside class="notes">
+							<ul>
+								<li>github.com/mkboudreau/meetup-june2014/code/taskrunner</li>
+								<li>go test -race</li>
+							</ul>
+						</aside>
+					</section>
+
+					<section data-markdown="resources/race_output_1.md" 
+						     data-transition="none"
+						     data-background-transition="none" 
+					         data-separator="^\n\n\n"  
+					         data-vertical="^\n\n"  
+					         data-notes="^Note:"  
+					         data-charset="iso-8859-15">
+					</section>
+					<section data-markdown="resources/race_output_2.md" 
+						     data-transition="none"
+						     data-background-transition="none" 
+					         data-separator="^\n\n\n"  
+					         data-vertical="^\n\n"  
+					         data-notes="^Note:"  
+					         data-charset="iso-8859-15">
+					</section>
+					<section data-markdown="resources/race_output_3.md"  
+						     data-transition="none"
+						     data-background-transition="none"
+					         data-separator="^\n\n\n"  
+					         data-vertical="^\n\n"  
+					         data-notes="^Note:"  
+					         data-charset="iso-8859-15">
+					</section>
+					<section data-markdown="resources/race_output_4.md"  
+						     data-transition="none"
+						     data-background-transition="none"
+					         data-separator="^\n\n\n"  
+					         data-vertical="^\n\n"  
+					         data-notes="^Note:"  
+					         data-charset="iso-8859-15">
+					</section>
+					<section >
+						<h2>Race Detection Example Continued</h2>	
+						<aside class="notes">
+							<ul>
+								<li>edit taskrunner_string.go (comment defer close)</li>
+								<li>go test -race</li>
+							</ul>
+						</aside>
+					</section>
+				</section>
+
+				<section data-background="#727d52" 
+						 data-transition="linear" 
+						 data-background-transition="slide">
+					<section>
+						<h2>Documentation Examples in Go</h2>					
+					</section>
+				</section>
+
+
+
+<!--
+				<section>
+					<h2>What is the idiomatic way to test in Go?</h2>
+                    <h5>Who defines the idiomatic way? authors of language? community?</h5>
+                    <p>What the community prefers or what the authors of Go prefer</p>
+                    <p>
+					<q cite="http://golang.org/doc/faq#Packages_Testing">&ldquo;A related point is that testing frameworks tend to develop into mini-languages of their own, with conditionals and controls and printing mechanisms, but Go already has all those capabilities; why recreate them? We'd rather write tests in Go; it's one fewer language to learn and the approach keeps the tests straightforward and easy to understand.&rdquo;</q>
+                        </p>
+                    <p>The authors have a style and preference for testing. Does this now become thee definer of idiomatic testing in Go and therefore restrict all extension and innovation? You be the judge! </p>
+				</section>
+
+-->
+
+				<section data-markdown="resources/end_links.md" 
+						 data-background="#2c2922" 
+				         data-separator="^\n\n\n"  
+				         data-vertical="^\n\n"  
+				         data-notes="^Note:"  
+				         data-charset="iso-8859-15">
+				</section>
+
+				<section
+						 data-background="#2c2922" >
+					<h1>Thank You</h1>
+				</section>
+
+			</div>
+
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.min.js"></script>
+
+		<script>
+
+			// Full list of configuration options available here:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+                overview:true,
+                slideNumber:true,
+				fragments: true,
+                
+
+				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+				transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+
+				// Parallax scrolling
+				// parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
+				// parallaxBackgroundSize: '2100px 900px',
+
+				// Optional libraries used to extend on reveal.js
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+					{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
