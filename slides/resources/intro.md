@@ -1,8 +1,8 @@
 # go test
 
-Presented by Michael Boudreau / [@mkboudreau](http://twitter.com/mkboudreau)
+Presented by Michael Boudreau 
 
-![gopher](gopher.jpg)
+![gopher](resources/gopher.jpg)
 
 Note:
 1. Java Dev - IBM - 15 Years this November
