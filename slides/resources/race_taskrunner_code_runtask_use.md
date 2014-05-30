@@ -13,13 +13,14 @@ taskData := &TaskData{
 }
 
 RunTask(taskData, &FilterString{Filter: "HELLO"})
-
-in <- "TESTING A"
-in <- "123"
-in <- "HELLO"
-in <- "456"
-in <- "TESTING B"
-close(in)
+go func() {
+	in <- "TESTING A"
+	in <- "123"
+	in <- "HELLO"
+	in <- "456"
+	in <- "TESTING B"
+	close(in)
+}()
 ```
 
 Note: 
