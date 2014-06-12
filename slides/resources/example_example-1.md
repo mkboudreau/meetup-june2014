@@ -3,7 +3,7 @@
 ##### Test File
 
 ```Go
-package example
+package helloworld
 
 import (
 	"fmt"
