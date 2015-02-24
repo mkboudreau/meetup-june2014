@@ -1,6 +1,6 @@
 {
   "name": "slides",
-  "version": "1.0",
+  "version": "1.0.0",
   "dependencies": {
     "underscore": "~1.5.1",
     "express": "~2.5.9",
