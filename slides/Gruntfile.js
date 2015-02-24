@@ -1,6 +1,6 @@
 /* global module:false */
 module.exports = function(grunt) {
-	var port = grunt.option('port') || 8000;
+	var port = process.env.VCAP_APP_PORT || grunt.option('port') || 8000;
 	// Project configuration
 	grunt.initConfig({
 		pkg: grunt.file.readJSON('package.json'),
