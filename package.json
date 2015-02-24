@@ -1,4 +1,6 @@
 {
+  "name": "slides",
+  "version": "1.0",
   "dependencies": {
     "underscore": "~1.5.1",
     "express": "~2.5.9",
@@ -15,5 +17,8 @@
     "grunt-contrib-connect": "~0.4.1",
     "grunt-zip": "~0.7.0",
     "grunt": "~0.4.0"
+  }, 
+  "scripts": {
+    "start": "cd slides && npm install && node_modules/.bin/grunt serve"
   }
 }
