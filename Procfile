@@ -1,0 +1,1 @@
+web: node install && node_modules/.bin/grunt serve 
