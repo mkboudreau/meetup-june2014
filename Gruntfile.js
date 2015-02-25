@@ -1,6 +1,7 @@
 /* global module:false */
 module.exports = function(grunt) {
 	var port = process.env.VCAP_APP_PORT || grunt.option('port') || 8000;
+	var hostname = process.env.VCAP_APP_HOST || grunt.option('hostname') || "127.0.0.1" ;
 	// Project configuration
 	grunt.initConfig({
 		pkg: grunt.file.readJSON('package.json'),
@@ -79,6 +80,7 @@ module.exports = function(grunt) {
 		connect: {
 			server: {
 				options: {
+					hostname: hostname,
 					port: port,
 					base: '.'
 				}
