@@ -1,1 +1,1 @@
-web: node install && node_modules/.bin/grunt serve 
+web: npm install && node_modules/.bin/grunt serve 
